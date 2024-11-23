@@ -1,0 +1,78 @@
+@use 'variaveis';
+@use 'header';
+@use 'hero';
+@use 'history';
+@use 'posters';
+@use 'faq';
+@use 'footer';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    list-style: none;
+}
+
+body {
+    background-color: variaveis.$CorDeFundo1;
+}
+
+@mixin text($FontSize: 14px) {
+    font-size: $FontSize;
+    line-height: $FontSize + 10px;
+    color: variaveis.$CorTexto1;
+}
+
+@mixin title($FontSize: 36px) {
+    @include text($FontSize);
+    color: variaveis.$CorTexto1;
+}
+
+.text--big {
+    @include text(16px);
+
+    @media(max-width: 760px) {
+        @include text(14px);
+    }
+}
+
+.text {
+    @include text(14px);
+
+    @media(max-width: 760px) {
+        @include text(12px);
+    }
+}
+
+.text--small {
+    @include text(12px);
+
+    @media(max-width: 760px) {
+        @include text(10px);
+    }
+}
+
+.title--big {
+    @include title(36px);
+
+    @media(max-width: 760px) {
+        @include title(28px);
+    }
+}
+
+.title {
+    @include title(32px);
+
+    @media(max-width: 760px) {
+        @include title(24px);
+    }
+}
+
+.title--small {
+    @include title(28px);
+
+    @media(max-width: 760px) {
+        @include title(20px);
+    }
+}

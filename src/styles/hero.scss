@@ -1,0 +1,49 @@
+@use 'variaveis';
+
+.hero {
+    text-align: center;
+
+    &__container {
+        padding: 10px 20px;
+    }
+
+    &__image {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    &__combos {
+        display: flex;
+        justify-content: space-between;
+
+        @media(max-width: 760px) {
+            display: block;
+            align-items: center;
+            justify-items: center;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__button {
+        margin-top: 20px;
+        width: 350px;
+        height: auto;
+        text-decoration: none;
+        text-align: center;
+        background-color: variaveis.$CorBotao2;
+        color: variaveis.$CorTexto1;
+        padding: 5px 10px;
+        border-radius: 5px;
+        border: 2px solid variaveis.$CorBotao1;
+        font-weight: bold;
+
+        &:hover {
+            background-color: variaveis.$CorBotao1;
+            color: variaveis.$CorTexto2;
+        }
+    }
+
+    p {
+        margin-bottom: 16px;
+    }
+}

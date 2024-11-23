@@ -1,0 +1,24 @@
+@use 'variaveis';
+
+.footer {
+    margin-top: 50px;
+    padding: 10px 20px;
+    background-color: variaveis.$CorDeFundo2;
+
+    &__container {
+        max-width: 1024px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+
+    &__logo {
+        max-height: 30px;
+        margin: 10px 20px;
+    }
+
+    p {
+        margin-bottom: 16px;
+    }
+}
